@@ -34,6 +34,10 @@
         <div class="content post-summary">
             {{ page.summary | markdown | safe }}
         </div>
+        {% else %}
+        <div class="content post-summary">
+            {{ page.content | markdown | safe }}
+        </div>
         {% endif %}
         
         {{ self::page_info(page=page) }}
